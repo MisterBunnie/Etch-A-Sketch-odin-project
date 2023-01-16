@@ -1,4 +1,7 @@
 let click = false;
+let color = 'black';
+let randomColor = document.querySelector('#random');
+let defaultColor = document.querySelector('black');
 document.addEventListener("DOMContentLoaded", function () {
     createBoard(16);
 
@@ -50,14 +53,14 @@ function getSize() {
         return choice;
     }
 }
-let color = 'black';
+
 function colorDiv() {
     if (click) {
         if (color == "random") {
-            this.style.backgroundColor = `hsl(${Math.random() * 360},100% 50%)`;
+            randomColor.style.backgroundColor = `hsl(${Math.random() * 360},100% 50%)`;
         }
         else {
-            this.style.backgroundColor = 'black';
+            defaultColor.style.backgroundColor = 'black';
         }
     }
 
